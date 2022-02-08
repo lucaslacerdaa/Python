@@ -1,28 +1,26 @@
-nota01 = int(input("Nota 1: "))
-nota02 = int(input("Nota 2: "))
-nota03 = int(input("Nota 3: "))
-nota04 = int(input("Nota 4: "))
+print('Questão 01')
 
-media = (nota01+nota02+nota03+nota04)/3
+lista = []
 
-maior = 0
-menor = 11
+for c in range(4):
+    n = float(input(f'Digite a {c + 1} nota: '))
+    lista.append(n)
 
+x = 0
+for c in range(4):
+    x += lista[c]
 
+y = 0
+for c in range(4):
+    if lista[c] > y:
+        y = lista[c]
 
-while i <= 4:
+z = 11
+for c in range(4):
+    if lista[c] < z:
+        z = lista[c]
 
-   if nota > maior:
-       maior = nota
-
-   if nota < menor:
-       menor = nota
-
-   i = i + 1
-
-print("Media do aluno: %d" % (media))
-print("Maior Nota: %d" % (maior))
-print("Menorr Nota: %d" % (menor))
-
-
-
+print('')
+print(f'A menor nota:{z}')
+print(f'A maior nota:{y}')
+print(f'A média:{x / 4:.1f}')

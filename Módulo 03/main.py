@@ -1,21 +1,15 @@
-i = 1
-maior = 0
-menor = 11
+print('Questão 10')
 
+def largest(arr,n):
 
-alunos = int(input("Quantidade de Alunos: "))
+    max = arr[0]
 
-while i <= alunos:
+    for i in range(1, n):
+        if arr[i] > max:
+            max = arr[i]
+    return max
 
-   nota = int(input("Nota: "))
-
-   if nota > maior:
-       maior = nota
-
-   if nota < menor:
-       menor = nota
-
-   i = i + 1
-
-print("Maior Nota: %d" % (maior))
-print("Menor Nota: %d" % (menor))
+arr = [10, 324, 45, 90, 9808, 5, 200, 900]
+n = len(arr)
+x = largest(arr,n)
+print ("O maior valor é: ", x)
